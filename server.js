@@ -1,6 +1,8 @@
 const express = require('express')
 var app = express()
 
+const port = process.env.PORT || 2000
+
 app.get("/", (req,res) => {
 res.send("Hello Piyush")
 })
@@ -13,4 +15,4 @@ app.get("/bad-request", (req,res) => {
     })
 })
 
-app.listen(2000)
+app.listen(port)
